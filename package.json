@@ -1,0 +1,23 @@
+{
+  "name": "scb-mcp",
+  "version": "0.1.0",
+  "description": "An MCP server over Statistics Sweden's business register: search, count and read workplaces from an assistant.",
+  "type": "module",
+  "bin": { "scb-mcp": "./dist/bin.js" },
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "engines": { "node": ">=22.6" },
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "check": "tsc --noEmit",
+    "test": "node --test --experimental-strip-types test/*.test.ts",
+    "start": "node --experimental-strip-types src/bin.ts"
+  },
+  "license": "MIT",
+  "author": "Christian Gregorcik",
+  "devDependencies": {
+    "@types/node": "22.9.0",
+    "typescript": "5.7.2"
+  }
+}
